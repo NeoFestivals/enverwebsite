@@ -1,0 +1,72 @@
+
+/* Grundstruktur */
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown > a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff; /* Ranger Navbar-Farbe */
+  text-decoration: none;
+}
+
+/* Dropdown-Menü */
+.custom-dropdown-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #2a2a2a; /* Ranger Dark Navbar Hintergrund */
+  min-width: 180px;
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Unterpunkte */
+.custom-dropdown-menu li a {
+  padding: 10px 15px;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+.custom-dropdown-menu li a:hover {
+  background: #3a3a3a; /* Hover-Effekt passend zum Ranger Template */
+}
+
+/* Desktop: Dropdown auf Hover */
+@media (min-width: 768px) {
+  .custom-dropdown:hover .custom-dropdown-menu {
+    display: block;
+    opacity: 1;
+  }
+}
+
+/* Mobile: Dropdown einrücken */
+@media (max-width: 767px) {
+  .custom-dropdown-menu {
+    position: static;
+    display: none;
+    opacity: 1;
+    padding-left: 20px;
+  }
+
+  .custom-dropdown.open .custom-dropdown-menu {
+    display: block;
+  }
+
+/* Überschreibung nur für Custom-Dropdown */
+#fh5co-header #navbar li.custom-dropdown .custom-dropdown-menu li a {
+    color: #fff !important; /* nur Dropdown-Links weiß */
+    font-size: 0.85em !important;
+}
+
+#fh5co-header #navbar li.custom-dropdown .custom-dropdown-menu li a:hover {
+    background-color: #3a3a3a;
+    color: #fff !important;
+}
