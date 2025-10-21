@@ -1,8 +1,8 @@
 
 /* NEU: Mobile Bildoptimierung */
 @media screen and (max-width: 992px) {
-  #fh5co-tour .img-feature-mobile {
-    max-height: 40vw;
+  #leistungen .img-feature-mobile {
+    max-height: 70vw;
     width: 100%;
     object-fit: cover;
     object-position: center;
