@@ -1,5 +1,13 @@
-.o
+.o/* Zeilenumbruch erzwingen */
+h1, h2, h3, h4, h5, h6 { /* Je nach deinem HTML-Tag anpassen */
+    word-wrap: break-word;  /* Wortumbruch erzwingen */
+    overflow-wrap: break-word; /* Alternativ ebenfalls den Zeilenumbruch erzwingen */
+    white-space: normal;  /* Verhindert, dass der Text in einer langen Linie bleibt */
+}
 
+#impressum h2, #datenschutz h2 {
+  font-size: 1.2em;
+}
 
 
 wl-dots {
